@@ -1,0 +1,52 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Desafio Ignite Chapter II",
+        "description": "This is a chalange",
+        "version": "1.0.0",
+        "contact": {
+            "email": "gustavo.ogm@gmail.com"
+        }
+    },
+
+    "paths": {
+        "/users":{
+            "post":{
+                "tags": ["user"],
+                "sumary": "Create a new user",
+                "description": "Cria um novo usuário",
+                "requestBody": {
+                    "content":{
+                        "application/json": {
+                            "schema":{
+                                "type": "object",
+                                "properties":{
+                                    "name":{
+                                        "type": "string"
+                                    },
+
+                                "email":{
+                                    "type": "string"
+                                }
+                                }
+                            },
+                            "example": {
+                                "name": "Gustavo",
+                                "email": "gustavo.ogm@123.com.br"
+                            },
+                            "responses":{
+                                "201": {
+                                    "description": "Created"
+                                },
+                                "400":
+                                {
+                                    "description": "error"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
